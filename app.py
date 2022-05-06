@@ -21,9 +21,7 @@ def index():
         text = request.form['text']
         category = request.form['category']
         price = request.form['price']
-        post_name = Post(text)
-        post_category = Post(category)
-        post_price = Post(price)
+        post = Post(text, category, price)
         db.session.add(post)
         db.session.commit()
     posts = Post.query.all()
