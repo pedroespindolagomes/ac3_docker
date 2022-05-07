@@ -22,9 +22,7 @@
 
 <div>
   {% for post in posts %}
-    <h4 class="well"><strong>{{post.text}}</strong></h4>
-    <h4 class="well"><strong>{{post.category}}</strong></h4>
-    <h4 class="well"><strong>{{post.price}}</strong></h4>
+  <h4 class="well"><strong>{{post.text}}</strong> - <em>{{post.category}}</em> - <em>R$ {{post.price}}</em></h4>
   {% endfor %}
 </div>
 
